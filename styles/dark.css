@@ -17,7 +17,6 @@
   --heading-color: #db00ff;
   --heading-text: #ff0070;
   --decorated-color: #ff0070;
-  --text-shadow: #ff0070;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +29,5 @@
     --heading-color: #db00ff;
     --heading-text: #ff0070;
     --decorated-color: #ff0070;
-    --text-shadow: #ff0070;
   }
 }

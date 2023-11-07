@@ -3,17 +3,14 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--text-color);
+  font-family: var(--main-font, monospace);
+  font-size: var(--font-size, 18px);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-}
-
-:root {
-  font-family: var(--main-font, monospace);
-  font-size: var(--font-size, 18px);
 }
 
 /* Header */
@@ -52,10 +49,10 @@ header {
   content: "";
   position: absolute;
   top: 20px;
-  right: 48px;
+  right: 47px;
   color: var(--accent-color);
   font-family: var(--main-font, monospace);
-  font-weight: 400;
+  font-weight: var(--font-weight);
   line-height: 25px;
   inline-size: 33px;
   block-size: 26px;
@@ -82,6 +79,7 @@ header {
 
 .header__theme-menu-button:hover {
   outline: 1px solid var(--decorated-color);
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
@@ -104,20 +102,9 @@ header {
   background-color: transparent;
 }
 
-a:hover {
-  border-bottom: 1px solid var(--text-color);
-}
-
-a:focus {
-  outline: none;
-}
-
-a:focus-visible {
-  border: 1px solid var(--text-color);
-}
-
 .header__theme-menu-button_active {
   border: 1px solid var(--decorated-color);
+  pointer-events: none;
 }
 
 .header__title {
@@ -130,7 +117,7 @@ a:focus-visible {
 }
 
 .shadow-title {
-  text-shadow: 4px 4px 0px var(--text-shadow);
+  text-shadow: 4px 4px 0px var(--accent-color);
 }
 
 .header__text {
@@ -168,6 +155,18 @@ a:focus-visible {
 
 .shadow-text {
   text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+a:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  border: 1px solid var(--text-color);
 }
 
 /* Section № 1 */
@@ -344,9 +343,7 @@ figure {
   line-height: 82.5%;
 }
 
-/* Разрешения 1024 768 375 */
-
-@media (width > 375px) {
+@media (width >= 768px) {
   header {
     margin-block-end: 60px;
     padding: 20px;
@@ -369,7 +366,7 @@ figure {
   }
 }
 
-@media (width <= 375px) {
+@media (width < 768px) {
   header {
     margin-block-end: 40px;
     padding: 10px;
@@ -390,10 +387,7 @@ figure {
   footer {
     padding: 10px;
   }
-}
-/* 768 */
 
-@media (width <= 768px) {
   .header__theme-menu {
     display: flex;
     justify-content: end;
@@ -403,9 +397,7 @@ figure {
   .header__theme-menu-list {
     flex-direction: column;
   }
-}
 
-@media (max-width: 768px) {
   .content__section-1 {
     grid-template-columns: 236px 1fr;
   }
@@ -429,7 +421,26 @@ figure {
   }
 }
 
-@media (max-width: 375px) {
+@media (width <= 375px) {
+  .decorated-zone::before {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .decorated-zone::after {
+    top: 10px;
+    right: 10px;
+  }
+
+  .decorated__item {
+    top: 10px;
+    right: 37px;
+  }
+
+  .header__title {
+    font-size: 116px;
+  }
+
   .header__text {
     max-width: 100%;
   }
@@ -465,8 +476,8 @@ figure {
   }
 
   .content__section-4 {
-    grid-template-columns: 355px;
-    grid-template-rows: min-content 142px 355px 237px 355px 237px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 142px 355px 237px 355px 237px;
     grid-template-areas:
       "title"
       "sunset"
@@ -477,26 +488,7 @@ figure {
     gap: 10px;
   }
 
-  .header__title {
-    font-size: 116px;
-  }
-
   .footer__title {
     font-size: 116px;
-  }
-
-  .decorated-zone::before {
-    bottom: 10px;
-    left: 10px;
-  }
-
-  .decorated-zone::after {
-    top: 10px;
-    right: 10px;
-  }
-
-  .decorated__item {
-    top: 10px;
-    right: 38px;
   }
 }

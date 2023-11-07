@@ -80,17 +80,40 @@ header {
   color: var(--accent-color);
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--decorated-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--decorated-color);
+}
 
 .header__theme-menu-button {
   min-width: 70px;
   height: 100%;
   border: none;
   padding-inline: 13px;
+  color: var(--decorated-color);
+  font-family: var(--main-font, monospace);
   font-weight: 400;
   line-height: 18px;
-  font-family: var(--main-font, monospace);
   background-color: transparent;
-  color: var(--decorated-color);
+}
+
+a:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  border: 1px solid var(--text-color);
 }
 
 .header__theme-menu-button_active {
@@ -139,7 +162,7 @@ header {
 .content__text {
   margin-block-start: 10px;
   color: var(--text-color);
-  font-weight: 400;
+  font-weight: var(--font-weight);
   line-height: 23.4px;
 }
 
@@ -323,7 +346,6 @@ figure {
 
 /* Разрешения 1024 768 375 */
 
-
 @media (width > 375px) {
   header {
     margin-block-end: 60px;
@@ -464,8 +486,8 @@ figure {
   }
 
   .decorated-zone::before {
-  bottom: 10px;
-  left: 10px;
+    bottom: 10px;
+    left: 10px;
   }
 
   .decorated-zone::after {
@@ -476,5 +498,5 @@ figure {
   .decorated__item {
     top: 10px;
     right: 38px;
-}
+  }
 }

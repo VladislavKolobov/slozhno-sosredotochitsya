@@ -5,4 +5,6 @@
 :root {
   --main-font: "IBM Plex mono";
   --font-size: 18px;
+  --font-weight: 400;
+  --line-hight: 23.4px;
 }

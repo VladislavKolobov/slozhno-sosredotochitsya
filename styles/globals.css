@@ -10,6 +10,7 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+  block-size: 100vh;
 }
 
 h1,
@@ -39,4 +40,14 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
 }

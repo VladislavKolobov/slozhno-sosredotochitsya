@@ -17,6 +17,7 @@
   --heading-color: #ffc2e6;
   --heading-text: #353430;
   --decorated-color: #353430;
+  --hover-color: rgba(50, 49, 45, 0.40);
 }
 
 .page.theme_light .decorated__item {
@@ -34,6 +35,7 @@
     --heading-color: #ffc2e6;
     --heading-text: #353430;
     --decorated-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.40);
   }
 
   .decorated__item {

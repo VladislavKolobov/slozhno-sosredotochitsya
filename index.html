@@ -18,7 +18,7 @@
   </head>
   <body class="page theme_dark">
     <header class="header decorated-zone">
-      <div class="decorated__item" aria-hidden="true">REC</div>
+      <span class="decorated__item" aria-hidden="true">rec</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -46,18 +46,16 @@
         </ul>
       </nav>
       <h1 class="header__title shadow-title">no focus</h1>
-      <div class="header__text">
-        <p class="title-decor">
-          Что делать, когда не можешь делать ничего <br />
-          Или почему нам так сложно сконцентрироваться, особенно когда очень
-          надо
-        </p>
-      </div>
+      <p class="header__text title-decor">
+        Что делать, когда не можешь делать ничего <br />
+        Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+      </p>
     </header>
     <main>
-      <section class="content__section-1">
+      <section class="content__section-why">
         <h2 class="content__title">Почему сосредоточиться так сложно</h2>
-        <article class="content-1">
+        <div class="content">
+        <article class="content-multitasking">
           <h3 class="title-decor">Многозадачность</h3>
           <p class="content__text text-style">
             Особенно сложно сосредоточиться, когда задач много и все они —
@@ -65,18 +63,18 @@
             (и всем нанимающим менеджерам этого мира)? А дело в том, что её
             просто не существует. Исследователи
             <a
-              class="shadow-text"
               href="https://dana.org/article/multicosts-of-multitasking/"
+              target="_blank"
             >
-              <span class="shadow-text">выяснили,</span>
-            </a>
-            что мозгу тяжело концентрироваться даже на двух делах одновременно.
-            А когда в поле внимания попадает несколько важных задач, организм
-            паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за
-            этого мы работаем невнимательно: ошибаемся и быстро устаём.
+              <span class="shadow-text">выяснили</span> </a
+            >, что мозгу тяжело концентрироваться даже на двух делах
+            одновременно. А когда в поле внимания попадает несколько важных
+            задач, организм паникует и выделяет кортизол и адреналин — «гормоны
+            стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро
+            устаём.
           </p>
         </article>
-        <article class="content-2">
+        <article class="content-dopamine">
           <h3 class="title-decor">Дофамин</h3>
           <p class="content__text text-style">
             С гормонами стресса всё понятно, но дальше — ещё интереснее. В нашей
@@ -89,10 +87,11 @@
             тем больше удовольствия получаешь.
           </p>
         </article>
+      </div>
       </section>
-      <section class="content__section-2">
+      <section class="content__section-what">
         <h2 class="content__title">Что снижает концентрацию внимания?</h2>
-        <article class="content-1">
+        <article class="content-multitasking">
           <h3 class="title title-decor">Многозадачность</h3>
           <p class="content__text text-style">
             Как концентрация может снижаться из-за… концентрации? Любая
@@ -103,7 +102,7 @@
             не давать ей отдохнуть.
           </p>
         </article>
-        <article class="content-2">
+        <article class="content-food">
           <h3 class="title title-decor">Еда</h3>
           <p class="content__text text-style">
             «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
@@ -114,7 +113,7 @@
             больше быстрых углеводов.
           </p>
         </article>
-        <article class="content-3">
+        <article class="content-gadgets">
           <h3 class="title title-decor">Гаджеты</h3>
           <p class="content__text text-style">
             Да-да, это та самая ситуация, когда на экране ноутбука — код, в
@@ -127,13 +126,16 @@
           </p>
         </article>
       </section>
-      <section class="content__section-3">
+      <section class="content__section-how">
         <h2 class="content__title">
-          Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
-          секунд)
+          Как концентрироваться лучше, чем золотая рыбка (то&nbsp;есть дольше
+          трёх секунд)
         </h2>
-        <h2 class="title-decor">5 простых (на самом деле не очень) советов</h2>
-        <article class="content-1">
+        <div class="content__list">
+        <h2 class="title-decor">
+          5&nbsp;простых (на&nbsp;самом деле не&nbsp;очень) советов
+        </h2>
+        <article class="content-sky">
           <h3 class="title">Представьте небо и облака</h3>
           <p class="content__text text-style">
             Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
@@ -146,7 +148,7 @@
             проблемах из будущего.
           </p>
         </article>
-        <article class="content-2">
+        <article class="content-music">
           <h3 class="title">Включите музыку</h3>
           <p class="content__text text-style">
             Но не любую, и не любимую. Любимая может быть связана с сильными
@@ -155,23 +157,23 @@
             попробовать включить плейлист в «белым шумом» или нейромузыкой.
           </p>
         </article>
-        <article class="content-3">
+        <article class="content-walk">
           <h3 class="title">Прогуляйтесь</h3>
           <p class="content__text text-style">
             Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
             <a
               href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+              target="_blank"
             >
-              <span class="shadow-text">показал,</span>
-            </a>
-            что созерцание природы повышает концентрацию, в то время как после
-            просмотра городских пейзажей она наоборот понижается. Можно
+              <span class="shadow-text">показал</span> </a
+            >, что созерцание природы повышает концентрацию, в то время как
+            после просмотра городских пейзажей она наоборот понижается. Можно
             совместить прогулку с физическими упражнениями или бегом — так в
             мозг поступит ещё больше кислорода и он будет лучше работать. Но и
             простая двадцатиминутная прогулка — тоже отличный вариант.
           </p>
         </article>
-        <article class="content-4">
+        <article class="content-eat">
           <h3 class="title">Хорошо ешьте</h3>
           <p class="content__text text-style">
             Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
@@ -180,7 +182,7 @@
             фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
           </p>
         </article>
-        <article class="content-5">
+        <article class="content-read">
           <h3 class="title">Читайте</h3>
           <p class="content__text text-style">
             Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы
@@ -189,49 +191,40 @@
             часов и круто тренирует направленное внимание.
           </p>
         </article>
+      </div>
       </section>
-      <section class="content__section-4">
+      <section class="content__section-images">
         <h2 class="title title-decor">А можно в картинках?</h2>
-        <figure class="sunset">
-          <img
-            class="content__image"
-            src="./images/sunset.png"
-            loading="lazy"
-            alt="Закат на фоне гор и моря"
-          />
-        </figure>
-        <figure class="ice-cream">
-          <img
-            class="content__image"
-            src="./images/ice-cream.png"
-            loading="lazy"
-            alt="Мороженное где ингридиенты улыбаются"
-          />
-        </figure>
-        <figure class="tape">
-          <img
-            class="content__image"
-            src="./images/tape.png"
-            loading="lazy"
-            alt="Пленочные кассеты для магнитофона"
-          />
-        </figure>
-        <figure class="books">
-          <img
-            class="content__image"
-            src="./images/books.png"
-            loading="lazy"
-            alt="Стопка разных книг и кружки на вверху"
-          />
-        </figure>
-        <figure class="street">
-          <img
-            class="content__image"
-            src="./images/street.png"
-            loading="lazy"
-            alt="Улица в Азии"
-          />
-        </figure>
+        <img
+          class="content__image sunset"
+          src="./images/sunset.png"
+          loading="lazy"
+          alt="Закат на фоне гор и моря"
+        />
+        <img
+          class="content__image ice-cream"
+          src="./images/ice-cream.png"
+          loading="lazy"
+          alt="Мороженное где ингридиенты улыбаются"
+        />
+        <img
+          class="content__image tape"
+          src="./images/tape.png"
+          loading="lazy"
+          alt="Пленочные кассеты для магнитофона"
+        />
+        <img
+          class="content__image books"
+          src="./images/books.png"
+          loading="lazy"
+          alt="Стопка разных книг и кружки на вверху"
+        />
+        <img
+          class="content__image street"
+          src="./images/street.png"
+          loading="lazy"
+          alt="Улица в Азии"
+        />
       </section>
     </main>
     <footer class="footer decorated-zone">

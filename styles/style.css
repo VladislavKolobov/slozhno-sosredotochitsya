@@ -21,6 +21,7 @@ header {
   grid-template-rows: 1fr auto 1fr;
   block-size: 100vh;
   inline-size: 100%;
+  min-height: 668px;
 }
 
 .decorated-zone::before {
@@ -54,15 +55,14 @@ header {
   font-family: var(--main-font, monospace);
   font-weight: var(--font-weight);
   line-height: 25px;
-  inline-size: 33px;
-  block-size: 26px;
+  text-transform: uppercase;
 }
 
 .decorated__item::after {
   content: "";
   position: absolute;
   border-radius: 50%;
-  box-shadow: 0 0 5px 3px var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
   background-color: var(--accent-color);
   inline-size: 9px;
   block-size: 9px;
@@ -78,7 +78,7 @@ header {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--decorated-color);
+  outline: 1px solid var(--hover-color);
   cursor: pointer;
 }
 
@@ -95,11 +95,13 @@ header {
   height: 100%;
   border: none;
   padding-inline: 13px;
+  padding-block: 4px;
   color: var(--decorated-color);
   font-family: var(--main-font, monospace);
   font-weight: 400;
   line-height: 18px;
   background-color: transparent;
+  text-transform: lowercase;
 }
 
 .header__theme-menu-button_active {
@@ -169,7 +171,11 @@ a:focus-visible {
   border: 1px solid var(--text-color);
 }
 
-/* Section № 1 */
+.text-style {
+  margin-block-start: 10px;
+}
+
+/* Section why */
 
 .content__title {
   color: var(--heading-text);
@@ -178,111 +184,91 @@ a:focus-visible {
   line-height: 23.4px;
 }
 
-.content__section-1 {
+.content__section-why .content-dopamine {
+  margin-block-start: 20px;
+}
+.content__section-why {
   display: grid;
   grid-template-columns: 315px 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "title content-1"
-    ". content-2";
   gap: 20px;
   inline-size: 100%;
 }
 
-.content__section-1 .content__title {
-  grid-area: title;
+.content__section-why .content__title {
+  grid-column: 1/2;
 }
 
-.content__section-1 .content-1 {
-  grid-area: content-1;
+.content__section-why .content {
+grid-column: 2/3;
 }
 
-.content__section-1 .content-2 {
-  grid-area: content-2;
-}
+/* Section what */
 
-/* Section № 2 */
-
-.content__section-2 {
+.content__section-what {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: min-content 1fr;
-  grid-template-areas:
-    "title .  ."
-    "content-1 content-2 content-3";
   gap: 20px;
   inline-size: 100%;
 }
 
-.content__section-2 .content__title {
-  grid-area: title;
+.content__section-what .content__title {
+  grid-column: 1/2;
 }
 
-.content__section-2 .content-1 {
-  grid-area: content-1;
+.content__section-what .content-multitasking {
+  grid-column: 1/2;
 }
 
-.content__section-2 .content-2 {
-  grid-area: content-2;
+.content__section-what .content-food {
+  grid-column: 2/3;
 }
 
-.content__section-2 .content-3 {
-  grid-area: content-3;
+.content__section-what .content-gadgets {
+  grid-column: 3/4;
 }
 
-/* Section № 3 */
+/* Section how */
 
-.content__section-3 {
+.content__section-how {
   display: grid;
   grid-template-columns: 315px 1fr;
-  grid-template-areas:
-    "content-title title"
-    "content-title content-1"
-    "content-title content-2"
-    "content-title content-3"
-    "content-title content-4"
-    "content-title content-5";
   gap: 20px;
+  inline-size: 100%;
 }
 
-.text-style {
-  margin-block-start: 10px;
+.content__section-how .title {
+  margin-block-start: 20px;
 }
 
-.content__section-3 .content__title {
-  grid-area: content-title;
+.content__section-how .content__title {
+  grid-column: 1/2;
 }
 
-.content__section-3 .title {
-  grid-area: title;
+.content__section-how .content-sky {
+  grid-column: 2/3;
 }
 
-.content__section-3 .content-1 {
-  grid-area: content-1;
+.content__section-how .content-music {
+  grid-column: 2/3;
 }
 
-.content__section-3 .content-2 {
-  grid-area: content-2;
+.content__section-how .content-walk {
+  grid-column: 2/3;
 }
 
-.content__section-3 .content-3 {
-  grid-area: content-3;
+.content__section-how .content-eat {
+  grid-column: 2/3;
 }
 
-.content__section-3 .content-4 {
-  grid-area: content-4;
+.content__section-how .content-read {
+  grid-column: 2/3;
 }
 
-.content__section-3 .content-5 {
-  grid-area: content-5;
-}
+/* Section images */
 
-/* Section № 4 */
-
-.content__section-4 {
+.content__section-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 260px 315px 428px;
   grid-template-areas:
     "title title title"
     "sunset sunset ice-cream"
@@ -292,6 +278,7 @@ a:focus-visible {
 }
 
 .content__image {
+  object-position: center;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -302,7 +289,7 @@ figure {
   padding: 0;
 }
 
-.content__section-4 .title {
+.content__section-images .title {
   grid-area: title;
 }
 
@@ -334,6 +321,7 @@ figure {
   align-items: center;
   inline-size: 100%;
   block-size: 100vh;
+  min-height: 668px;
 }
 
 .footer__title {
@@ -343,7 +331,7 @@ figure {
   line-height: 82.5%;
 }
 
-@media (width >= 768px) {
+@media (width >= 600px) {
   header {
     margin-block-end: 60px;
     padding: 20px;
@@ -357,7 +345,7 @@ figure {
     margin-block-end: 80px;
   }
 
-  .content__section-4 {
+  .content__section-images {
     margin-block-end: 60px;
   }
 
@@ -366,7 +354,7 @@ figure {
   }
 }
 
-@media (width < 768px) {
+@media (width <= 600px) {
   header {
     margin-block-end: 40px;
     padding: 10px;
@@ -380,48 +368,54 @@ figure {
     margin-block-end: 50px;
   }
 
-  .content__section-4 {
+  .content__section-images {
     margin-block-end: 40px;
   }
 
   footer {
     padding: 10px;
   }
+}
 
+@media (width <= 768px) {
   .header__theme-menu {
     display: flex;
     justify-content: end;
-    align-items: center;
   }
 
   .header__theme-menu-list {
     flex-direction: column;
   }
 
-  .content__section-1 {
+.header__title {
+  inset-inline-start: -20px;
+}
+
+  .content__section-why {
     grid-template-columns: 236px 1fr;
   }
 
-  .content__section-2 {
-    grid-template-columns: 236px 1fr 1fr;
-    grid-template-areas:
-      "title . ."
-      "content-1 content-1 content-1"
-      "content-2 content-2 content-2"
-      "content-3 content-3 content-3";
+  .content__section-what .content__title {
+    max-width: 236px;
   }
 
-  .content__section-3 {
+  .content__section-what {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .content__section-how {
     grid-template-columns: 236px 1fr;
   }
 
-  .content__section-4 {
+  .content__section-images {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 192px 230px 318px;
   }
 }
 
-@media (width <= 375px) {
+
+@media (width <= 600px) {
   .decorated-zone::before {
     bottom: 10px;
     left: 10px;
@@ -438,46 +432,25 @@ figure {
   }
 
   .header__title {
-    font-size: 116px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    inset-inline-start: 1px;
   }
 
   .header__text {
     max-width: 100%;
   }
 
-  .content__section-1 {
-    grid-template-columns: 355px;
-    grid-template-rows: min-content 1fr 1fr;
-    grid-template-areas:
-      "title"
-      "content-1"
-      "content-2";
+  .content__section-why {
+    display: flex;
+    flex-direction: column;
   }
 
-  .content__section-2 {
-    grid-template-columns: 355px;
-    grid-template-areas:
-      "title"
-      "content-1"
-      "content-2"
-      "content-3";
-  }
-
-  .content__section-3 {
-    grid-template-columns: 355px;
-    grid-template-areas:
-      "content-title"
-      "title"
-      "content-1"
-      "content-2"
-      "content-3"
-      "content-4"
-      "content-5";
-  }
-
-  .content__section-4 {
+  .content__section-how {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 142px 355px 237px 355px 237px;
+  }
+
+  .content__section-images {
+    grid-template-columns: 1fr;
     grid-template-areas:
       "title"
       "sunset"
@@ -489,6 +462,6 @@ figure {
   }
 
   .footer__title {
-    font-size: 116px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }

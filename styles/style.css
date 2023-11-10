@@ -210,9 +210,14 @@ a:focus-visible {
 
 .content__section-what {
   display: grid;
-  grid-template-rows: min-content, 1fr;
   gap: 20px;
   inline-size: 100%;
+}
+
+.content__section-what .content__title {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
 }
 
 .content__section-what .content-list {
@@ -231,8 +236,8 @@ a:focus-visible {
 }
 
 .content__section-how .content-list {
-  grid-template-rows: 1fr;
   display: grid;
+  grid-template-rows: 1fr;
   gap: 20px;
 }
 
@@ -343,10 +348,6 @@ figure {
     grid-template-columns: 236px 1fr;
   }
 
-  .content__section-what .content__title {
-    max-width: 236px;
-  }
-
   .content__section-what .content-list {
     display: flex;
     flex-direction: column;
@@ -413,7 +414,7 @@ figure {
   }
 
   .content__section-what .content__title {
-    max-width: 355px;
+    display: flex;
   }
 
   .content__section-how {

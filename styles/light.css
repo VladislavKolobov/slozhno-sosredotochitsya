@@ -17,10 +17,10 @@
   --heading-color: #ffc2e6;
   --heading-text: #353430;
   --decorated-color: #353430;
-  --hover-color: rgba(50, 49, 45, 0.40);
+  --hover-color: rgba(50, 49, 45, 0.4);
 }
 
-.page.theme_light .decorated__item {
+.theme_light .decorated__item {
   display: none;
 }
 
@@ -35,10 +35,10 @@
     --heading-color: #ffc2e6;
     --heading-text: #353430;
     --decorated-color: #353430;
-    --hover-color: rgba(50, 49, 45, 0.40);
+    --hover-color: rgba(50, 49, 45, 0.4);
   }
 
-  .page.theme_auto .decorated__item {
+  .decorated__item {
     display: none;
   }
 }

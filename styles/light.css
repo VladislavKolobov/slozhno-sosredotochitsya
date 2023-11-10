@@ -38,7 +38,7 @@
     --hover-color: rgba(50, 49, 45, 0.40);
   }
 
-  .decorated__item {
+  .page.theme_auto .decorated__item {
     display: none;
   }
 }

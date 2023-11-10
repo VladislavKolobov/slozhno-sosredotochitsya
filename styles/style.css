@@ -186,10 +186,6 @@ a:focus-visible {
   line-height: 23.4px;
 }
 
-.content__section-why .content-why:nth-child(2) {
-  margin-block-start: 20px;
-}
-
 .content__section-why {
   display: grid;
   grid-template-columns: 315px 1fr;
@@ -197,11 +193,16 @@ a:focus-visible {
   inline-size: 100%;
 }
 
+.content__section-why .content-list {
+  display: grid;
+  row-gap: 20px;
+}
+
 .content__section-why .content__title {
   grid-column: 1/2;
 }
 
-.content__section-why .content-why {
+.content__section-why .content {
   grid-column: 2/3;
 }
 
@@ -209,25 +210,15 @@ a:focus-visible {
 
 .content__section-what {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content, 1fr;
   gap: 20px;
   inline-size: 100%;
 }
 
-.content__section-what .content__title {
-  grid-column: 1/2;
-}
-
-.content__section-what .content-what:nth-of-type(1) {
-  grid-column: 1/2;
-}
-
-.content__section-what .content-what:nth-of-type(2) {
-  grid-column: 2/3;
-}
-
-.content__section-what .content-what:nth-of-type(3) {
-  grid-column: 3/4;
+.content__section-what .content-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 /* Section how */
@@ -239,12 +230,10 @@ a:focus-visible {
   inline-size: 100%;
 }
 
-.content__section-how .title {
-  margin-block-start: 20px;
-}
-
-.content__section-how .content-how {
-  grid-column: 2/3;
+.content__section-how .content-list {
+  grid-template-rows: 1fr;
+  display: grid;
+  gap: 20px;
 }
 
 /* Section images */
@@ -358,7 +347,7 @@ figure {
     max-width: 236px;
   }
 
-  .content__section-what {
+  .content__section-what .content-list {
     display: flex;
     flex-direction: column;
   }
